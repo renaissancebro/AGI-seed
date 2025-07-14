@@ -28,9 +28,14 @@ This will test three gravitational resistance types:
 2. **Preferences** - "What type of music do you prefer?" (moderate resistance)
 3. **Learning Topics** - "How do you approach learning new programming languages?" (low resistance)
 
-Run the core identity model demo (includes loss aversion demonstration):
+Run the core identity model demo (includes loss aversion and emotion templates):
 ```bash
 python examples/demo_identity.py --model
+```
+
+Run the emotion templates demo:
+```bash
+python -m core.emotion_templates
 ```
 
 ## 🎯 Custom Questions
