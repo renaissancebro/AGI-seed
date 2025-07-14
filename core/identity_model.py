@@ -71,10 +71,13 @@ class Identity:
         self.beliefs[belief.name] = belief
         self.recalculate_mass()
     
-    def integrate_experience(self, experience: Experience, target_belief_name: str) -> None:
-        """Integrate an experience into a specific belief."""
+    def integrate_experience(self, experience: Experience, target_belief_name: str, loss_aversion_factor: float = 2.0) -> None:
+        """
+        Integrate an experience into a specific belief with loss aversion.
+        Negative experiences have amplified impact on identity formation.
+        """
         if target_belief_name in self.beliefs:
-            self.beliefs[target_belief_name].update_from_experience(experience)
+            self.beliefs[target_belief_name].update_from_experience(experience, loss_aversion_factor)
             self.recalculate_mass()
         else:
             raise ValueError(f"Belief '{target_belief_name}' not found in identity")
