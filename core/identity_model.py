@@ -150,12 +150,31 @@ class Identity:
         """
         Integrate an experience into a specific belief with loss aversion.
         Negative experiences have amplified impact on identity formation.
+        Optionally processes through emotion system if enabled.
         """
-        if target_belief_name in self.beliefs:
-            self.beliefs[target_belief_name].update_from_experience(experience, loss_aversion_factor)
-            self.recalculate_mass()
-        else:
+        if target_belief_name not in self.beliefs:
             raise ValueError(f"Belief '{target_belief_name}' not found in identity")
+        
+        belief = self.beliefs[target_belief_name]
+        
+        # Process through emotions if system is available
+        if self.use_emotions and self.emotion_system:
+            emotion_mods = self.emotion_system.process_experience(experience, belief)
+            # TODO: Apply emotion modifications to experience processing
+            # For now, just log active emotions
+            active_emotions = self.emotion_system.get_active_emotions()
+            if active_emotions:
+                # Emotions are processed but don't modify behavior yet (no principles added)
+                pass
+        
+        belief.update_from_experience(experience, loss_aversion_factor)
+        self.recalculate_mass()
+    
+    def get_emotional_state(self) -> dict:
+        """Get current emotional state if emotion system is enabled."""
+        if self.use_emotions and self.emotion_system:
+            return self.emotion_system.get_active_emotions()
+        return {}
     
     def recalculate_mass(self) -> None:
         """Recalculate total identity mass from sum of belief strengths."""
