@@ -133,5 +133,5 @@ I'm still forming my understanding of this:
 
 This demonstrates core concepts of **emotional primitives in AI**:
 - **Uncertainty as emotional primitive** - AI experiences and expresses uncertainty through natural language
-- **Identity as gravitational system** - Uses physics to model identity formation and consistency
+- **Identity as gravitational system** - Uses object-oriented physics model with Experience/Belief/Identity classes to simulate identity formation through gravitational resistance
 - Creates more authentic and trustworthy AI interactions through embodied emotional expression
