@@ -2,6 +2,7 @@
 Gravitational identity modeling system.
 Models identity as a gravitational system where experiences influence beliefs,
 and beliefs form the mass that creates gravitational resistance to identity change.
+Includes emotion templates for fear, shame, comfort, pride, and loneliness.
 """
 
 class Experience:
