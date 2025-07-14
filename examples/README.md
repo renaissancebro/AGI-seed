@@ -100,17 +100,33 @@ I'm still forming my understanding of this:
 
 ## 🔬 How It Works
 
+### Uncertainty Agent
 1. **Multiple Sampling** - Agent generates 3 responses to the same question
 2. **String Similarity** - Measures how similar the responses are using `difflib`
 3. **Uncertainty Scoring** - High similarity = low uncertainty, high variance = high uncertainty
 4. **Tone Adjustment** - Adds appropriate uncertainty qualifiers based on score
 
-## 🎯 Uncertainty Thresholds
+### Identity Agent
+1. **Multiple Sampling** - Agent generates 3 responses to identity-related questions
+2. **Gravity Calculation** - Measures response consistency as gravitational strength
+3. **Physics Modeling** - Uses orbital mechanics metaphors for identity stability
+4. **Identity Tone** - Modulates expression based on gravitational identity strength
 
+## 🎯 Thresholds
+
+### Uncertainty Thresholds
 - **< 0.1**: Fully confident (no qualifier)
 - **0.1-0.5**: Moderate uncertainty ("I think this is likely...")
 - **> 0.5**: High uncertainty ("This may be unreliable...")
 
+### Identity Gravity Thresholds
+- **> 0.7**: Strong gravity - stable identity ("This aligns with my core understanding")
+- **0.3-0.7**: Moderate gravity - identity fluidity ("I'm exploring this perspective")
+- **< 0.3**: Weak gravity - forming identity ("I'm still forming my understanding")
+
 ## 💡 Research Applications
 
-This demonstrates the core concept of **uncertainty as emotional primitive** - the AI doesn't just detect uncertainty, it **experiences and expresses** it through natural language, creating more authentic and trustworthy interactions.
+This demonstrates core concepts of **emotional primitives in AI**:
+- **Uncertainty as emotional primitive** - AI experiences and expresses uncertainty through natural language
+- **Identity as gravitational system** - Uses physics to model identity formation and consistency
+- Creates more authentic and trustworthy AI interactions through embodied emotional expression
