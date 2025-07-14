@@ -124,10 +124,10 @@ I'm still forming my understanding of this:
 - **0.1-0.5**: Moderate uncertainty ("I think this is likely...")
 - **> 0.5**: High uncertainty ("This may be unreliable...")
 
-### Identity Gravity Thresholds
-- **> 0.7**: Strong gravity - stable identity ("This aligns with my core understanding")
-- **0.3-0.7**: Moderate gravity - identity fluidity ("I'm exploring this perspective")
-- **< 0.3**: Weak gravity - forming identity ("I'm still forming my understanding")
+### Identity Gravitational Resistance Thresholds
+- **> 0.5**: High resistance - stable identity ("This aligns with my core understanding")
+- **0.1-0.5**: Moderate resistance - identity fluidity ("I'm exploring this perspective")
+- **< 0.1**: Low resistance - forming/adaptive identity ("I'm still forming my understanding")
 
 ## 💡 Research Applications
 
