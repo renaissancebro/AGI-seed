@@ -112,10 +112,10 @@ I'm still forming my understanding of this:
 4. **Tone Adjustment** - Adds appropriate uncertainty qualifiers based on score
 
 ### Identity Agent
-1. **Multiple Sampling** - Agent generates 3 responses to identity-related questions
-2. **Gravity Calculation** - Measures response consistency as gravitational strength
-3. **Physics Modeling** - Uses orbital mechanics metaphors for identity stability
-4. **Identity Tone** - Modulates expression based on gravitational identity strength
+1. **Experience Integration** - Processes experiences through belief system
+2. **Gravitational Resistance** - Calculates identity stability through belief strength
+3. **Object-Oriented Physics** - Models identity as gravitational system with Experience/Belief/Identity classes
+4. **Identity Tone** - Modulates expression based on gravitational resistance to change
 
 ## 🎯 Thresholds
 
