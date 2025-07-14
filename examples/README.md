@@ -112,10 +112,11 @@ I'm still forming my understanding of this:
 4. **Tone Adjustment** - Adds appropriate uncertainty qualifiers based on score
 
 ### Identity Agent
-1. **Experience Integration** - Processes experiences through belief system
+1. **Experience Integration** - Processes experiences through belief system with loss aversion
 2. **Gravitational Resistance** - Calculates identity stability through belief strength
 3. **Object-Oriented Physics** - Models identity as gravitational system with Experience/Belief/Identity classes
-4. **Identity Tone** - Modulates expression based on gravitational resistance to change
+4. **Loss Aversion** - Negative experiences have 2x impact of positive ones (humans fear losing 2x more than gaining)
+5. **Identity Tone** - Modulates expression based on gravitational resistance to change
 
 ## 🎯 Thresholds
 
