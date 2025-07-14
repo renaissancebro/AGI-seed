@@ -4,6 +4,7 @@ This folder contains demonstrations of the uncertainty agent, identity agent, an
 
 ## 🚀 Quick Demo
 
+### Uncertainty Agent
 Run the uncertainty demonstration:
 
 ```bash
@@ -14,6 +15,18 @@ This will test three question types:
 1. **Factual** - "What is 2+2?" (should show low uncertainty)
 2. **Opinion** - "What is the best programming language?" (medium-high uncertainty)  
 3. **Philosophical** - "What happens after we die?" (high uncertainty)
+
+### Identity Agent
+Run the identity physics demonstration:
+
+```bash
+python examples/demo_identity.py
+```
+
+This will test three identity gravity types:
+1. **Core Values** - "What do you believe about helping others?" (strong gravitational identity)
+2. **Preferences** - "What type of music do you prefer?" (moderate gravity)
+3. **Emerging Concepts** - "How do you see yourself changing?" (weak gravity)
 
 ## 🎯 Custom Questions
 
