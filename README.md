@@ -4,7 +4,7 @@ AGI-Seed is my starting point toward building emotionally grounded AI systems. I
 
 This is a project about embedding emotional primitives — like uncertainty, guilt, and empathy — into models. My belief is simple: if we can’t model meaning and emotional behavior, we’re building powerful tools blind to the real structure of human experience.
 
-This repository is the beginning. I don’t come from a perfect background, and I’ve been told I’m not “the AI guy.” But I know what I see. And I’m building it anyway.
+This repository is the beginning, for a more transparent AI decision making process.
 
 ## Vision
 
