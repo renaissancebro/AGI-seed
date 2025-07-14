@@ -158,119 +158,51 @@ class Identity:
 # Example usage demonstrating the gravitational identity system
 def demonstrate_identity_system():
     """
-    Example showing how an agent with "I'm a leader" belief 
-    processes experiences with realistic scaling, loss aversion, and elastic resilience.
+    Simple demonstration of key identity system features.
     """
-    print("🧠 Gravitational Identity System Demo (Realistic Human Scale)")
-    print("=" * 70)
+    print("🧠 Identity System Demo")
+    print("=" * 40)
     
-    # Create an identity
+    # Create agent with leadership belief
     agent = Identity("Josh")
-    
-    # Add a belief about leadership
-    leadership_belief = Belief("I'm a leader", strength=0.6)
+    leadership_belief = Belief("I'm a leader", strength=0.600)
     agent.add_belief(leadership_belief)
     
-    print(f"Initial state:")
-    print(f"  Identity: {agent.core_label}")
-    print(f"  Belief: '{leadership_belief.name}' (strength: {leadership_belief.strength:.3f})")
-    print(f"  Identity mass: {agent.mass:.3f}")
-    print(f"  Gravitational resistance: {agent.gravitational_resistance():.3f}")
+    print(f"Starting belief strength: {leadership_belief.strength:.3f}")
     print()
     
-    # Positive experience
-    positive_exp = Experience(
-        content="Successfully led team through difficult project",
-        valence="positive",
-        intensity=0.8,
-        source="work_experience"
-    )
+    # Normal positive experience
+    pos_exp = Experience("Led successful project", "positive", 0.8, "work")
+    agent.integrate_experience(pos_exp, "I'm a leader")
+    print(f"After positive experience: {leadership_belief.strength:.3f} (tiny change)")
     
-    print(f"Processing positive experience:")
-    print(f"  Content: {positive_exp.content}")
-    print(f"  Weighted value (no loss aversion): {positive_exp.weighted_value():.3f}")
-    
-    agent.integrate_experience(positive_exp, "I'm a leader")
-    
-    print(f"  New belief strength: {leadership_belief.strength:.3f}")
-    print(f"  New identity mass: {agent.mass:.3f}")
-    print(f"  New gravitational resistance: {agent.gravitational_resistance():.3f}")
+    # Normal negative experience  
+    neg_exp = Experience("Team criticized leadership", "negative", 0.8, "feedback")
+    agent.integrate_experience(neg_exp, "I'm a leader")
+    print(f"After negative experience: {leadership_belief.strength:.3f} (loss aversion 2x)")
     print()
     
-    # Negative experience with same intensity to show loss aversion effect
-    negative_exp = Experience(
-        content="Team criticized my leadership style",
-        valence="negative", 
-        intensity=0.8,  # Same intensity as positive to show 2x effect
-        source="feedback"
-    )
-    
-    print(f"Processing negative experience (same intensity = 0.8):")
-    print(f"  Content: {negative_exp.content}")
-    print(f"  Weighted value (with 2x loss aversion): {negative_exp.weighted_value():.3f}")
-    print(f"  Loss aversion factor: 2.0x (negative experiences hurt more)")
-    
-    agent.integrate_experience(negative_exp, "I'm a leader")
-    
-    print(f"  Final belief strength: {leadership_belief.strength:.3f}")
-    print(f"  Final identity mass: {agent.mass:.3f}")
-    print(f"  Final gravitational resistance: {agent.gravitational_resistance():.3f}")
+    # Traumatic experience
+    print("Trauma threshold demo:")
+    trauma = Experience("Publicly fired as leader", "negative", 0.95, "trauma")
+    before_trauma = leadership_belief.strength
+    agent.integrate_experience(trauma, "I'm a leader")
+    print(f"Before trauma: {before_trauma:.3f}")
+    print(f"After trauma:  {leadership_belief.strength:.3f} (larger impact)")
     print()
     
-    print(f"Realistic Scale Analysis:")
-    print(f"  Positive experience weighted impact: +{positive_exp.weighted_value():.3f}")
-    print(f"  Negative experience weighted impact: {negative_exp.weighted_value():.3f} (2x loss aversion)")
-    print(f"  Experience weight (early experiences): {leadership_belief._calculate_experience_weight():.3f}")
-    print(f"  Elastic resistance: {leadership_belief._calculate_elastic_resistance():.3f}")
-    print(f"  Actual belief change: {leadership_belief.strength - 0.632:.6f} (tiny, realistic)")
-    print(f"  Total experiences processed: {len(leadership_belief.experiences)}")
-    
-    # Demonstrate trauma threshold
-    print()
-    print("=" * 70)
-    print("Demonstrating Trauma Threshold (intensity > 0.9)")
-    
-    trauma_exp = Experience(
-        content="Publicly humiliated and fired as leader",
-        valence="negative",
-        intensity=0.95,  # Traumatic intensity
-        source="major_failure"
-    )
-    
-    strength_before_trauma = leadership_belief.strength
-    print(f"Before trauma: {strength_before_trauma:.6f}")
-    
-    agent.integrate_experience(trauma_exp, "I'm a leader")
-    
-    print(f"After trauma (intensity=0.95): {leadership_belief.strength:.6f}")
-    print(f"Trauma impact: {leadership_belief.strength - strength_before_trauma:.6f} (much larger)")
-    
-    # Demonstrate elastic recovery
-    print()
-    print("Demonstrating Elastic Recovery (healing over time):")
-    for i in range(5):
+    # Elastic recovery
+    print("Healing over time:")
+    for i in range(3):
         leadership_belief.apply_elastic_recovery()
-        print(f"  Recovery step {i+1}: {leadership_belief.strength:.6f}")
+        print(f"Recovery {i+1}: {leadership_belief.strength:.3f}")
     
-    # Show accumulated experience diminishing returns
     print()
-    print("=" * 70)
-    print("Demonstrating Experience Diminishing Returns:")
-    
-    test_belief = Belief("Test belief", strength=0.5)
-    
-    # Add many small positive experiences
-    for i in range(200):
-        small_exp = Experience(f"Small positive {i}", "positive", 0.3, "routine")
-        test_belief.update_from_experience(small_exp)
-        
-        if i in [9, 49, 99, 199]:  # Show key milestones
-            weight = test_belief._calculate_experience_weight()
-            print(f"  After {i+1} experiences: strength={test_belief.strength:.6f}, weight={weight:.3f}")
-    
-    print(f"\nFinal analysis:")
-    print(f"  200 positive experiences only moved belief from 0.500 to {test_belief.strength:.6f}")
-    print(f"  Demonstrates realistic human-scale resistance to change")
+    print("Key features demonstrated:")
+    print("✓ Realistic small changes for normal experiences")
+    print("✓ Loss aversion (negative impacts 2x positive)")  
+    print("✓ Trauma threshold for major events")
+    print("✓ Elastic recovery toward baseline")
 
 
 if __name__ == "__main__":
