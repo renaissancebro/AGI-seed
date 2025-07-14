@@ -125,11 +125,21 @@ class Identity:
     """
     High-level identity object with beliefs that create gravitational mass.
     Identity mass determines resistance to identity shifts.
+    Can optionally include emotion system for enhanced processing.
     """
-    def __init__(self, core_label: str):
+    def __init__(self, core_label: str, use_emotions: bool = False):
         self.core_label = core_label
         self.beliefs = {}  # dict of belief name to Belief
         self.mass = 0.0
+        self.use_emotions = use_emotions
+        self.emotion_system = None
+        
+        if use_emotions:
+            try:
+                from core.emotion_templates import EmotionSystem
+                self.emotion_system = EmotionSystem()
+            except ImportError:
+                print("Warning: emotion_templates not available, proceeding without emotions")
     
     def add_belief(self, belief: Belief) -> None:
         """Add a belief to the identity system."""
