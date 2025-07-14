@@ -37,7 +37,8 @@ def run_demo():
     print("🧠 AGI-Seed Gravitational Identity Agent Demonstration")
     print("=" * 60)
     print("This demo shows how gravitational resistance models identity stability and fluidity.")
-    print("The agent processes experiences through beliefs to calculate gravitational resistance.")
+    print("The agent processes experiences through beliefs with realistic human-scale psychology.")
+    print("Features: loss aversion, elastic resilience, trauma thresholds, emotion templates.")
     print()
     
     for i, demo in enumerate(DEMO_QUESTIONS, 1):
