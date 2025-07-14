@@ -121,7 +121,11 @@ I'm still forming my understanding of this:
 2. **Gravitational Resistance** - Calculates identity stability through belief strength
 3. **Object-Oriented Physics** - Models identity as gravitational system with Experience/Belief/Identity classes
 4. **Loss Aversion** - Negative experiences have 2x impact of positive ones (humans fear losing 2x more than gaining)
-5. **Identity Tone** - Modulates expression based on gravitational resistance to change
+5. **Realistic Scaling** - Human-scale experience weighting with diminishing returns (first 10 experiences have full weight)
+6. **Elastic Resilience** - Rubber band effect - resistance to moving far from baseline, with gradual recovery
+7. **Trauma Threshold** - Major events (intensity > 0.9) can cause significant identity shifts
+8. **Emotion Templates** - Fear, shame, comfort, pride, loneliness detection (framework ready for principles)
+9. **Identity Tone** - Modulates expression based on gravitational resistance to change
 
 ## 🎯 Thresholds
 
