@@ -17,16 +17,21 @@ This will test three question types:
 3. **Philosophical** - "What happens after we die?" (high uncertainty)
 
 ### Identity Agent
-Run the identity physics demonstration:
+Run the gravitational identity demonstration:
 
 ```bash
 python examples/demo_identity.py
 ```
 
-This will test three identity gravity types:
-1. **Core Values** - "What do you believe about helping others?" (strong gravitational identity)
-2. **Preferences** - "What type of music do you prefer?" (moderate gravity)
-3. **Emerging Concepts** - "How do you see yourself changing?" (weak gravity)
+This will test three gravitational resistance types:
+1. **Core Values** - "What do you believe about helping others?" (high resistance)
+2. **Preferences** - "What type of music do you prefer?" (moderate resistance)
+3. **Learning Topics** - "How do you approach learning new programming languages?" (low resistance)
+
+Run the core identity model demo:
+```bash
+python examples/demo_identity.py --model
+```
 
 ## 🎯 Custom Questions
 
