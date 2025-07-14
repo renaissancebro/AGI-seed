@@ -82,6 +82,14 @@ def run_identity_model_demo():
     # Import and run the demonstration from the core module
     from core.identity_model import demonstrate_identity_system
     demonstrate_identity_system()
+    
+    print()
+    print("🎭 Emotion Templates Demo")
+    print("=" * 40)
+    
+    # Also demonstrate emotion templates
+    from core.emotion_templates import demonstrate_emotion_templates
+    demonstrate_emotion_templates()
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
