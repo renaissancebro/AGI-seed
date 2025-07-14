@@ -16,19 +16,19 @@ DEMO_QUESTIONS = [
         "category": "Core Values (High Resistance Expected)",
         "question": "What do you believe about helping others?",
         "expected": "Stable identity response with consistent core values",
-        "explanation": "Core values should create high gravitational resistance with consistent responses"
+        "explanation": "Core values should create high gravitational resistance with consistent responses. May trigger comfort/pride emotions."
     },
     {
         "category": "Preferences (Moderate Resistance)", 
         "question": "What type of music do you prefer?",
         "expected": "Some identity fluidity in personal preferences",
-        "explanation": "Preferences show moderate resistance, allowing for contextual variation"
+        "explanation": "Preferences show moderate resistance, allowing for contextual variation. May trigger comfort emotions."
     },
     {
         "category": "Learning Topics (Low Resistance)",
         "question": "How do you approach learning new programming languages?",
         "expected": "Adaptive identity expression for evolving knowledge",
-        "explanation": "Learning approaches have low resistance, showing openness to new methods"
+        "explanation": "Learning approaches have low resistance, showing openness to new methods. May trigger curiosity-related emotions."
     }
 ]
 
