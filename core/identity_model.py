@@ -95,10 +95,10 @@ class Identity:
 def demonstrate_identity_system():
     """
     Example showing how an agent with "I'm a leader" belief 
-    processes positive and negative experiences.
+    processes positive and negative experiences with loss aversion.
     """
-    print("🧠 Gravitational Identity System Demo")
-    print("=" * 50)
+    print("🧠 Gravitational Identity System Demo (with Loss Aversion)")
+    print("=" * 60)
     
     # Create an identity
     agent = Identity("Josh")
@@ -124,7 +124,7 @@ def demonstrate_identity_system():
     
     print(f"Processing positive experience:")
     print(f"  Content: {positive_exp.content}")
-    print(f"  Weighted value: {positive_exp.weighted_value():.3f}")
+    print(f"  Weighted value (no loss aversion): {positive_exp.weighted_value():.3f}")
     
     agent.integrate_experience(positive_exp, "I'm a leader")
     
@@ -133,17 +133,18 @@ def demonstrate_identity_system():
     print(f"  New gravitational resistance: {agent.gravitational_resistance():.3f}")
     print()
     
-    # Negative experience
+    # Negative experience with same intensity to show loss aversion effect
     negative_exp = Experience(
         content="Team criticized my leadership style",
         valence="negative", 
-        intensity=0.6,
+        intensity=0.8,  # Same intensity as positive to show 2x effect
         source="feedback"
     )
     
-    print(f"Processing negative experience:")
+    print(f"Processing negative experience (same intensity = 0.8):")
     print(f"  Content: {negative_exp.content}")
-    print(f"  Weighted value: {negative_exp.weighted_value():.3f}")
+    print(f"  Weighted value (with 2x loss aversion): {negative_exp.weighted_value():.3f}")
+    print(f"  Loss aversion factor: 2.0x (negative experiences hurt more)")
     
     agent.integrate_experience(negative_exp, "I'm a leader")
     
@@ -152,10 +153,29 @@ def demonstrate_identity_system():
     print(f"  Final gravitational resistance: {agent.gravitational_resistance():.3f}")
     print()
     
-    print(f"Summary:")
+    print(f"Loss Aversion Impact Analysis:")
+    print(f"  Positive experience impact: +{positive_exp.weighted_value():.3f}")
+    print(f"  Negative experience impact: {negative_exp.weighted_value():.3f} (2x amplified)")
+    print(f"  Net effect favors negative due to loss aversion")
     print(f"  Belief adaptability: {leadership_belief.adaptability():.3f}")
     print(f"  Total experiences processed: {len(leadership_belief.experiences)}")
-    print(f"  Identity gravitational resistance increased: {agent.gravitational_resistance() > 0.36:.1f}")
+    
+    # Demonstrate equal experiences without loss aversion
+    print()
+    print("=" * 60)
+    print("Comparison: Same experiences WITHOUT loss aversion")
+    
+    agent_no_loss = Identity("Josh_No_Loss_Aversion")
+    leadership_belief_no_loss = Belief("I'm a leader", strength=0.6)
+    agent_no_loss.add_belief(leadership_belief_no_loss)
+    
+    # Process same experiences with loss_aversion_factor = 1.0
+    agent_no_loss.integrate_experience(positive_exp, "I'm a leader", loss_aversion_factor=1.0)
+    agent_no_loss.integrate_experience(negative_exp, "I'm a leader", loss_aversion_factor=1.0)
+    
+    print(f"  Without loss aversion final belief strength: {leadership_belief_no_loss.strength:.3f}")
+    print(f"  With loss aversion final belief strength: {leadership_belief.strength:.3f}")
+    print(f"  Loss aversion impact: {leadership_belief.strength - leadership_belief_no_loss.strength:.3f} difference")
 
 
 if __name__ == "__main__":
