@@ -48,15 +48,76 @@ class Belief:
     def update_from_experience(self, experience: Experience, loss_aversion_factor: float = 2.0) -> None:
         """
         Adjusts strength based on experience weighted value * adaptability.
-        Includes loss aversion where negative experiences have amplified impact.
+        Includes loss aversion, realistic scaling, and elastic resilience.
         """
         self.experiences.append(experience)
         
-        # Calculate change based on experience impact (with loss aversion) and current adaptability
-        change = experience.weighted_value(loss_aversion_factor) * self.adaptability() * 0.1  # 0.1 as scaling factor
+        # Human-scale experience weighting: impacts decrease as experience count grows
+        experience_weight = self._calculate_experience_weight()
+        
+        # Check for trauma threshold (high intensity negative experiences)
+        is_traumatic = experience.valence == "negative" and experience.intensity > 0.9
+        
+        if is_traumatic:
+            # Traumatic experiences can cause significant shifts
+            scaling_factor = 0.05  # 5% potential change for trauma
+        else:
+            # Normal experiences: much smaller impact (0.1% typical)
+            scaling_factor = 0.001
+        
+        # Calculate change with realistic scaling
+        raw_change = experience.weighted_value(loss_aversion_factor) * self.adaptability() 
+        change = raw_change * scaling_factor * experience_weight
+        
+        # Apply elastic resilience: resistance to moving too far from baseline
+        elastic_resistance = self._calculate_elastic_resistance()
+        change *= elastic_resistance
         
         # Update strength, clamping to valid range
         self.strength = max(0.0, min(1.0, self.strength + change))
+    
+    def _calculate_experience_weight(self) -> float:
+        """
+        Calculate how much new experiences matter based on accumulated experience.
+        More experiences = less weight per new experience (diminishing returns).
+        """
+        current_experiences = len(self.experiences)
+        
+        # Early experiences matter more, then diminishing returns
+        if current_experiences < 10:
+            return 1.0  # First 10 experiences have full weight
+        elif current_experiences < 100:
+            return 0.5  # Next 90 experiences have half weight
+        elif current_experiences < self.experience_threshold:
+            return 0.2  # Building toward mature belief
+        else:
+            return 0.1  # Mature beliefs change very slowly
+    
+    def _calculate_elastic_resistance(self) -> float:
+        """
+        Calculate elastic resistance to moving too far from baseline.
+        Like a rubber band - harder to stretch further from center.
+        """
+        distance_from_baseline = abs(self.strength - self.baseline_strength)
+        
+        # Elastic resistance increases exponentially with distance
+        if distance_from_baseline < 0.1:
+            return 1.0  # No resistance for small changes
+        elif distance_from_baseline < 0.3:
+            return 0.7  # Some resistance for moderate changes
+        else:
+            return 0.3  # Strong resistance for large changes
+    
+    def apply_elastic_recovery(self, recovery_factor: float = 0.01) -> None:
+        """
+        Apply gradual elastic recovery toward baseline over time.
+        Call this periodically to simulate healing/normalization.
+        """
+        if abs(self.strength - self.baseline_strength) > 0.05:
+            # Move slightly back toward baseline
+            direction = 1 if self.baseline_strength > self.strength else -1
+            recovery = direction * recovery_factor
+            self.strength = max(0.0, min(1.0, self.strength + recovery))
 
 
 class Identity:
