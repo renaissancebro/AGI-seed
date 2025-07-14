@@ -93,3 +93,40 @@ This becomes:
 ```text
 [Prompt] → [LLM Completion x3] → [Entropy + Variance] → [Uncertainty Score]
      → [Verbalizer: adjust tone] → [Final Output]
+
+---
+
+## 🧪 Testing
+
+### Mock Test (`test_mock_uncertainty.py`)
+Comprehensive testing without requiring API keys:
+
+**Components Tested:**
+- **Basic Response Generation**: Verifies the complete pipeline from prompt to uncertainty-adjusted response
+- **Variance Scoring**: Tests `score_variance()` function with sample outputs to ensure proper uncertainty quantification
+- **Uncertainty Verbalization**: Validates `uncertainty_tone()` function across different confidence levels:
+  - Low uncertainty (score < 0.2): Returns response without modification
+  - Medium uncertainty (0.2-0.5): Adds "I believe this is likely, but not fully certain"
+  - High uncertainty (> 0.5): Adds "This may be unreliable — here's my best attempt"
+
+**Mock System**: Uses simulated OpenAI responses with controlled variance to test uncertainty detection without API costs.
+
+### Interactive Tester (`simulation/test_uncertainty_agent.py`)
+Real-time testing interface for live uncertainty assessment:
+
+**Features:**
+- **Interactive Prompt**: Continuous input loop with `>> ` prompt
+- **Exit Commands**: Type `quit` or `exit` to end, or use Ctrl+C
+- **Error Handling**: Graceful handling of API errors and connection issues
+- **Real API Integration**: Uses actual OpenAI API calls to demonstrate uncertainty in real responses
+
+**Usage:**
+```bash
+python simulation/test_uncertainty_agent.py
+```
+
+**What to Observe:**
+- Response variance across multiple API calls
+- Uncertainty qualifiers based on output consistency
+- Different confidence levels for various types of questions (factual vs. subjective)
+EOF < /dev/null
