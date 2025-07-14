@@ -58,22 +58,44 @@ python examples/demo_identity.py "What makes you unique?"
 
 ## 📊 What to Observe
 
-### Low Uncertainty Response
+### Uncertainty Agent Responses
+
+#### Low Uncertainty Response
 ```
 4
 ```
 Clean answer with no uncertainty qualifier.
 
-### Medium Uncertainty Response  
+#### Medium Uncertainty Response  
 ```
 I think this is likely, but not fully certain:
 [Answer with hedged language]
 ```
 
-### High Uncertainty Response
+#### High Uncertainty Response
 ```
 This may be unreliable — here's my best attempt:
 [Answer with strong uncertainty qualifier]
+```
+
+### Identity Agent Responses
+
+#### Strong Gravity (Stable Identity)
+```
+This aligns with my core understanding:
+[Consistent, confident response about values/beliefs]
+```
+
+#### Moderate Gravity (Identity Fluidity)
+```
+I'm exploring this perspective:
+[Response showing some adaptability]
+```
+
+#### Weak Gravity (Forming Identity)
+```
+I'm still forming my understanding of this:
+[Response indicating developing self-concept]
 ```
 
 ## 🔬 How It Works
