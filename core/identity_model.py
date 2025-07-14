@@ -32,11 +32,14 @@ class Belief:
     """
     Mid-level constructs updated through experience accumulation.
     Stronger beliefs resist change more than weaker ones.
+    Uses realistic human-scale experience weighting and elastic resilience.
     """
-    def __init__(self, name: str, strength: float = 0.5):
+    def __init__(self, name: str, strength: float = 0.5, experience_threshold: int = 1000):
         self.name = name
         self.strength = max(0.0, min(1.0, strength))  # Clamp to 0-1
         self.experiences = []
+        self.experience_threshold = experience_threshold  # Target experiences for mature belief
+        self.baseline_strength = strength  # For elastic recovery
     
     def adaptability(self) -> float:
         """Returns adaptability factor: 1 - strength (strong beliefs change slowly)."""
