@@ -14,10 +14,18 @@ class Experience:
         self.intensity = intensity  # 0-1 float
         self.source = source
     
-    def weighted_value(self) -> float:
-        """Returns a signed float based on valence * intensity."""
-        multiplier = 1.0 if self.valence == "positive" else -1.0
-        return multiplier * self.intensity
+    def weighted_value(self, loss_aversion_factor: float = 2.0) -> float:
+        """
+        Returns a signed float based on valence * intensity with loss aversion.
+        
+        Loss aversion: negative experiences have 2x impact of positive ones
+        (humans fear losing 2x more than gaining the same amount).
+        """
+        if self.valence == "positive":
+            return self.intensity
+        else:
+            # Negative experiences have amplified impact due to loss aversion
+            return -1.0 * self.intensity * loss_aversion_factor
 
 
 class Belief:
