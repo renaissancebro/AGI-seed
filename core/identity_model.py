@@ -217,29 +217,60 @@ def demonstrate_identity_system():
     print(f"  Final gravitational resistance: {agent.gravitational_resistance():.3f}")
     print()
     
-    print(f"Loss Aversion Impact Analysis:")
-    print(f"  Positive experience impact: +{positive_exp.weighted_value():.3f}")
-    print(f"  Negative experience impact: {negative_exp.weighted_value():.3f} (2x amplified)")
-    print(f"  Net effect favors negative due to loss aversion")
-    print(f"  Belief adaptability: {leadership_belief.adaptability():.3f}")
+    print(f"Realistic Scale Analysis:")
+    print(f"  Positive experience weighted impact: +{positive_exp.weighted_value():.3f}")
+    print(f"  Negative experience weighted impact: {negative_exp.weighted_value():.3f} (2x loss aversion)")
+    print(f"  Experience weight (early experiences): {leadership_belief._calculate_experience_weight():.3f}")
+    print(f"  Elastic resistance: {leadership_belief._calculate_elastic_resistance():.3f}")
+    print(f"  Actual belief change: {leadership_belief.strength - 0.632:.6f} (tiny, realistic)")
     print(f"  Total experiences processed: {len(leadership_belief.experiences)}")
     
-    # Demonstrate equal experiences without loss aversion
+    # Demonstrate trauma threshold
     print()
-    print("=" * 60)
-    print("Comparison: Same experiences WITHOUT loss aversion")
+    print("=" * 70)
+    print("Demonstrating Trauma Threshold (intensity > 0.9)")
     
-    agent_no_loss = Identity("Josh_No_Loss_Aversion")
-    leadership_belief_no_loss = Belief("I'm a leader", strength=0.6)
-    agent_no_loss.add_belief(leadership_belief_no_loss)
+    trauma_exp = Experience(
+        content="Publicly humiliated and fired as leader",
+        valence="negative",
+        intensity=0.95,  # Traumatic intensity
+        source="major_failure"
+    )
     
-    # Process same experiences with loss_aversion_factor = 1.0
-    agent_no_loss.integrate_experience(positive_exp, "I'm a leader", loss_aversion_factor=1.0)
-    agent_no_loss.integrate_experience(negative_exp, "I'm a leader", loss_aversion_factor=1.0)
+    strength_before_trauma = leadership_belief.strength
+    print(f"Before trauma: {strength_before_trauma:.6f}")
     
-    print(f"  Without loss aversion final belief strength: {leadership_belief_no_loss.strength:.3f}")
-    print(f"  With loss aversion final belief strength: {leadership_belief.strength:.3f}")
-    print(f"  Loss aversion impact: {leadership_belief.strength - leadership_belief_no_loss.strength:.3f} difference")
+    agent.integrate_experience(trauma_exp, "I'm a leader")
+    
+    print(f"After trauma (intensity=0.95): {leadership_belief.strength:.6f}")
+    print(f"Trauma impact: {leadership_belief.strength - strength_before_trauma:.6f} (much larger)")
+    
+    # Demonstrate elastic recovery
+    print()
+    print("Demonstrating Elastic Recovery (healing over time):")
+    for i in range(5):
+        leadership_belief.apply_elastic_recovery()
+        print(f"  Recovery step {i+1}: {leadership_belief.strength:.6f}")
+    
+    # Show accumulated experience diminishing returns
+    print()
+    print("=" * 70)
+    print("Demonstrating Experience Diminishing Returns:")
+    
+    test_belief = Belief("Test belief", strength=0.5)
+    
+    # Add many small positive experiences
+    for i in range(200):
+        small_exp = Experience(f"Small positive {i}", "positive", 0.3, "routine")
+        test_belief.update_from_experience(small_exp)
+        
+        if i in [9, 49, 99, 199]:  # Show key milestones
+            weight = test_belief._calculate_experience_weight()
+            print(f"  After {i+1} experiences: strength={test_belief.strength:.6f}, weight={weight:.3f}")
+    
+    print(f"\nFinal analysis:")
+    print(f"  200 positive experiences only moved belief from 0.500 to {test_belief.strength:.6f}")
+    print(f"  Demonstrates realistic human-scale resistance to change")
 
 
 if __name__ == "__main__":
