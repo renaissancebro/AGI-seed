@@ -159,10 +159,10 @@ class Identity:
 def demonstrate_identity_system():
     """
     Example showing how an agent with "I'm a leader" belief 
-    processes positive and negative experiences with loss aversion.
+    processes experiences with realistic scaling, loss aversion, and elastic resilience.
     """
-    print("🧠 Gravitational Identity System Demo (with Loss Aversion)")
-    print("=" * 60)
+    print("🧠 Gravitational Identity System Demo (Realistic Human Scale)")
+    print("=" * 70)
     
     # Create an identity
     agent = Identity("Josh")
