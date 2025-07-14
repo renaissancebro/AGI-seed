@@ -32,6 +32,7 @@ This will test three identity gravity types:
 
 Test your own questions:
 
+### Uncertainty Agent
 ```bash
 python examples/demo_questions.py "Your question here"
 ```
@@ -41,6 +42,18 @@ Examples:
 python examples/demo_questions.py "What is the capital of France?"
 python examples/demo_questions.py "Should I invest in cryptocurrency?"
 python examples/demo_questions.py "What is consciousness?"
+```
+
+### Identity Agent
+```bash
+python examples/demo_identity.py "Your question here"
+```
+
+Examples:
+```bash
+python examples/demo_identity.py "What are your core principles?"
+python examples/demo_identity.py "How do you see yourself?"
+python examples/demo_identity.py "What makes you unique?"
 ```
 
 ## 📊 What to Observe
