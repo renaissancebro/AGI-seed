@@ -109,4 +109,3 @@ websocket-client==1.8.0
 widgetsnbextension==4.0.14
 openai
 python-dotenv
-scikit-learn
