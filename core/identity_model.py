@@ -42,12 +42,15 @@ class Belief:
         """Returns adaptability factor: 1 - strength (strong beliefs change slowly)."""
         return 1.0 - self.strength
     
-    def update_from_experience(self, experience: Experience) -> None:
-        """Adjusts strength based on experience weighted value * adaptability."""
+    def update_from_experience(self, experience: Experience, loss_aversion_factor: float = 2.0) -> None:
+        """
+        Adjusts strength based on experience weighted value * adaptability.
+        Includes loss aversion where negative experiences have amplified impact.
+        """
         self.experiences.append(experience)
         
-        # Calculate change based on experience impact and current adaptability
-        change = experience.weighted_value() * self.adaptability() * 0.1  # 0.1 as scaling factor
+        # Calculate change based on experience impact (with loss aversion) and current adaptability
+        change = experience.weighted_value(loss_aversion_factor) * self.adaptability() * 0.1  # 0.1 as scaling factor
         
         # Update strength, clamping to valid range
         self.strength = max(0.0, min(1.0, self.strength + change))
