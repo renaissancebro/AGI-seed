@@ -1,6 +1,6 @@
 # 🧠 AGI-Seed Examples
 
-This folder contains demonstrations of the uncertainty agent and emotional modeling framework.
+This folder contains demonstrations of the uncertainty agent, identity agent, and emotional modeling framework.
 
 ## 🚀 Quick Demo
 
