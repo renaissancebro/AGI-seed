@@ -8,17 +8,17 @@ def uncertainty_tone(output: str, score: float) -> str:
 
 def identity_tone(output: str, gravity_score: float) -> str:
     """
-    Apply identity-based tone modulation using physics metaphors.
+    Apply identity-based tone modulation using gravitational resistance.
     
-    Strong gravity = stable, consistent identity expression
-    Weak gravity = fluid, adaptive identity expression
+    High gravitational resistance = stable, consistent identity
+    Low gravitational resistance = fluid, adaptive identity
     """
-    if gravity_score > 0.7:
-        # Strong gravitational identity - stable, consistent
+    if gravity_score > 0.5:
+        # High gravitational resistance - stable identity
         return f"This aligns with my core understanding:\n{output}"
-    elif gravity_score > 0.3:
-        # Moderate gravity - some identity fluidity
+    elif gravity_score > 0.1:
+        # Moderate resistance - some identity fluidity
         return f"I'm exploring this perspective:\n{output}"
     else:
-        # Weak gravity - highly adaptive/forming identity
+        # Low resistance - forming/adaptive identity
         return f"I'm still forming my understanding of this:\n{output}"
