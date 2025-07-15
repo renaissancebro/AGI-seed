@@ -38,6 +38,16 @@ Run the emotion templates demo:
 python -m psychological_systems.emotions.templates
 ```
 
+Run the shame mechanism demo:
+```bash
+python examples/demo_shame.py
+```
+
+Run comprehensive shame scenarios:
+```bash
+python examples/demo_shame.py --comprehensive
+```
+
 ## 🎯 Custom Questions
 
 Test your own questions:
