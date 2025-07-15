@@ -223,6 +223,29 @@ Unlike emotions, uncertainty:
 - **Calibration**: Uncertainty correlates with actual error rates
 - **Trust**: Honest admission of limitations builds appropriate trust
 
+### Metaphor: Uncertainty as Cognitive Osmosis
+
+“Uncertainty is like cognitive osmosis: when knowledge concentration is uneven across contexts, information seeps through semi-permeable assumptions — never all at once, never with full clarity.”
+
+This metaphor frames uncertainty as a natural diffusion process, like molecules crossing a semi-permeable membrane. It highlights how AI responses shift depending on the “concentration gradient” of internal confidence.
+
+Key Mappings:
+	•	Concentration gradient → Certainty variance across sampled responses
+	•	Semi-permeable membrane → Language and framing that shape what gets through
+	•	Osmotic pressure → The AI’s reluctance or inability to express a confident response
+	•	Equilibrium → Consistency across responses (low uncertainty)
+	•	Flow rate → How quickly the system converges on a stable answer
+
+Interpretation:
+	•	Low uncertainty = equilibrium has been reached. Responses are consistent and clear.
+	•	Medium uncertainty = knowledge is seeping through. The system hesitates or hedges.
+	•	High uncertainty = strong gradient, dissonance between internal models. Expression is cautious or fragmented.
+
+Why Osmosis Works:
+	•	Captures the passive nature of uncertainty — it’s not a lack of knowledge, but a diffusion of confidence.
+	•	Highlights context sensitivity — the “membrane” of language lets some meanings through more easily than others.
+	•	Suggests a natural equilibrium-seeking behavior — the system tends toward clarity, but may not reach it instantly.
+
 ## Research Applications
 
 This demonstrates:
