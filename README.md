@@ -58,9 +58,15 @@ This repository implements **emotions as computational primitives** using physic
 
 ## 📚 Documentation
 
-- **[Uncertainty Model](notes/uncertainty.md)** - Complete osmosis metaphor and implementation details
+### System Documentation
+- **[Identity System](examples/docs/identity.md)** - Gravitational identity physics with realistic human psychology
+- **[Shame Mechanism](examples/docs/shame.md)** - Advanced shame modeling with internalized standards
+- **[Emotion Templates](examples/docs/emotions.md)** - Fear, shame, comfort, pride, loneliness framework
+- **[Uncertainty System](examples/docs/uncertainty.md)** - AI uncertainty measurement and expression
+
+### Quick Reference
+- **[Examples Overview](examples/README.md)** - Quick start commands and system overview
 - **[Robustness Roadmap](notes/robustness_roadmap.md)** - Future improvements and research directions
-- **[Examples README](examples/README.md)** - How to run demonstrations
 
 ## Vision
 
