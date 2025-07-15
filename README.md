@@ -70,9 +70,11 @@ This repository implements **emotions as computational primitives** using physic
 
 ## Vision
 
-- Introduce emotional grounding into AI models starting with uncertainty.
-- Explore how emotional embedding can increase alignment, deterrence, and interpretability.
-- Make emotional behavior a measurable component in model outputs — not just a side effect.
+- Build emotionally grounded AI systems using realistic human-scale psychology
+- Develop modular psychological primitives that can be combined for complex emotional behavior
+- Create AI that experiences emotions authentically rather than simulating them superficially
+- Enable transparent emotional decision-making through measurable psychological states
+- Advance AI alignment through embodied emotional understanding and human-like cognitive biases
 
 ## Credit & Origin
 
