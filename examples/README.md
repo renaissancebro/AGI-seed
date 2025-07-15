@@ -35,7 +35,7 @@ python examples/demo_identity.py --model
 
 Run the emotion templates demo:
 ```bash
-python -m core.emotion_templates
+python -m psychological_systems.emotions.templates
 ```
 
 ## 🎯 Custom Questions
