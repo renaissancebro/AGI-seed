@@ -185,9 +185,9 @@ class Pride(EmotionTemplate):
         """
         Pride triggers from high-achievement or recognition experiences.
         """
-        if experience.valence == "positive":
-            # High-intensity positive experiences more likely to trigger pride
-            pride_intensity = min(experience.intensity * 1.1, 1.0)
+        if experience.valence == "positive" and experience.intensity > 0.8:
+            # Only high-intensity positive experiences trigger pride
+            pride_intensity = min((experience.intensity - 0.8) * 3.0, 1.0)
             
             # TODO: Add content analysis for achievement keywords
             # pride_keywords = ["success", "achievement", "recognition", "accomplished", "excellent"]
