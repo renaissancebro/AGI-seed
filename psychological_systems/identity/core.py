@@ -137,7 +137,7 @@ class Identity:
         
         if use_emotions:
             try:
-                from psychological_systems.emotions import EmotionSystem
+                from core.emotion_templates import EmotionSystem
                 self.emotion_system = EmotionSystem()
             except ImportError:
                 print("Warning: emotion_templates not available, proceeding without emotions")
