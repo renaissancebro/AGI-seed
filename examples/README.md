@@ -79,6 +79,13 @@ Each system has focused documentation with theory, usage examples, and observabl
 - **Recognition amplification**: Self < peer < public < authority recognition multipliers
 - **Belief strengthening**: Pride reinforces related beliefs and buffers shame effects
 
+### Comfort Mechanism
+- **Emotional ground state**: Still water metaphor representing psychological equilibrium
+- **Multiplicative formula**: comfort = alignment × certainty × identity_coherence
+- **Stability building**: Comfort intensifies over time when undisturbed
+- **Emotional dampening**: Reduces intensity of other emotions by up to 40%
+- **Interruption dynamics**: Dissonance, uncertainty, or pressure create "ripples"
+
 ### Dual Emotion System
 - **Simultaneous emotions**: Agents experience both pride and shame from single actions
 - **Emotional interactions**: Pride buffers shame effects, complex psychological states
