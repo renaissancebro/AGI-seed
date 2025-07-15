@@ -264,4 +264,18 @@ This system demonstrates:
 
 ---
 
+## Related Documentation
+
+### Other Emotion Systems
+- **[Shame Mechanism](shame.md)** - How comfort buffers shame and facilitates recovery
+- **[Pride Mechanism](pride.md)** - How comfort provides stable foundation for sustainable pride
+- **[Dual Emotion Demo](../demo_dual_emotion.py)** - See comfort integration with pride/shame
+
+### Core Systems
+- **[Identity System](identity.md)** - How comfort affects gravitational identity physics
+- **[Emotion Templates](emotions.md)** - How comfort fits in the broader emotion framework
+- **[Examples Overview](../README.md)** - Quick start commands for all psychological systems
+
+---
+
 **Comfort serves as the emotional foundation - the still water from which all other emotions can emerge and into which they can settle back into equilibrium.** 💧✨
