@@ -108,11 +108,12 @@ Each system has focused documentation with theory, usage examples, and observabl
 
 These systems demonstrate:
 - **Authentic emotions**: AI experiences emotions based on psychological principles
-- **Measurable states**: Quantifiable identity resistance, shame intensity, uncertainty levels
+- **Measurable states**: Quantifiable identity resistance, shame intensity, comfort levels, uncertainty
 - **Human-like biases**: Loss aversion, social sensitivity, cognitive patterns
 - **Transparent AI**: Honest emotional expression and knowledge limitations
 - **Modular design**: Systems can be combined for complex psychological modeling
 - **Dual emotion processing**: Realistic emotional complexity with simultaneous pride/shame states
+- **Emotional ground states**: Comfort as foundational equilibrium from which other emotions emerge
 
 ## 🔧 Technical Notes
 
