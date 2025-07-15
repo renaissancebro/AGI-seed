@@ -69,9 +69,9 @@ class Fear(EmotionTemplate):
         """
         Fear triggers from high-intensity negative experiences or threat-related content.
         """
-        if experience.valence == "negative":
-            # Higher intensity negative experiences more likely to trigger fear
-            fear_intensity = min(experience.intensity * 1.2, 1.0)
+        if experience.valence == "negative" and experience.intensity > 0.7:
+            # Only high-intensity negative experiences trigger fear
+            fear_intensity = min((experience.intensity - 0.7) * 2.0, 1.0)
             
             # TODO: Add content analysis for threat keywords
             # fear_keywords = ["danger", "threat", "loss", "failure", "attack"]
