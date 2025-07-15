@@ -89,7 +89,7 @@ def run_identity_model_demo():
     print("=" * 40)
     
     # Also demonstrate emotion templates
-    from core.emotion_templates import demonstrate_emotion_templates
+    from psychological_systems.emotions import demonstrate_emotion_templates
     demonstrate_emotion_templates()
 
 if __name__ == "__main__":
