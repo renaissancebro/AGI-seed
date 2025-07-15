@@ -88,4 +88,4 @@ This repository implements **emotions as computational primitives** using physic
 
 ## Credit & Origin
 
-This project is created and maintained by [Joshua C. Freeman](https://www.linkedin.com/in/josh-freeman/). It is the starting point of an open emotional modeling framework. All commits are timestamped. Feel free to fork and build — just cite the origin.
+This project is created and maintained by Joshua C. Freeman(https://www.linkedin.com/in/joshuafreeman-/). It is the starting point of an open emotional modeling framework. All commits are timestamped. Feel free to fork and build — just cite the origin.
