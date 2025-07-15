@@ -33,6 +33,8 @@ This repository implements **emotions as computational primitives** using physic
   - Loss aversion, elastic resilience, trauma thresholds, realistic scaling
 - **[Advanced Shame Mechanism](examples/docs/shame.md)** - Violations of internalized standards trigger shame
   - Semantic dissonance, social exposure amplification, belief damage
+- **[Pride Mechanism](examples/docs/pride.md)** - Achievement-based pride with neurodivergent/neurotypical integration styles
+  - Mandatory vs optional aspirations, recognition amplification, shame buffering
 - **[Emotion Templates](examples/docs/emotions.md)** - Fear, shame, comfort, pride, loneliness detection framework
 - **[Uncertainty as AI Measurement](examples/docs/uncertainty.md)** - Response variance driving decision confidence
 
