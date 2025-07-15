@@ -21,6 +21,7 @@ echo "OPENAI_API_KEY=your-key-here" > .env
 python examples/demo_identity.py --model    # Identity & emotion templates
 python examples/demo_shame.py              # Advanced shame mechanism
 python examples/demo_pride.py              # Pride with neurodivergent/neurotypical styles
+python examples/demo_dual_emotion.py       # MentorBot experiencing pride and shame
 python examples/demo_questions.py          # Uncertainty agent (needs API key)
 ```
 
