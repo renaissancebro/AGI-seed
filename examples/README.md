@@ -23,6 +23,14 @@ python examples/demo_pride.py --basic      # Simple pride demonstration
 python examples/demo_pride.py --comparison # Integration style comparison
 ```
 
+### Comfort Mechanism
+```bash
+python examples/demo_comfort.py            # Emotional ground state demonstration
+python examples/demo_comfort.py --scenario peaceful    # Full comfort lifecycle
+python examples/demo_comfort.py --scenario comparison  # Comfort vs disruption
+python examples/demo_comfort.py --scenario stability   # Extended stability building
+```
+
 ### Dual Emotion System
 ```bash
 python examples/demo_dual_emotion.py       # MentorBot experiencing pride and shame
