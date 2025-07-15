@@ -71,6 +71,12 @@ Each system has focused documentation with theory, usage examples, and observabl
 - **Recognition amplification**: Self < peer < public < authority recognition multipliers
 - **Belief strengthening**: Pride reinforces related beliefs and buffers shame effects
 
+### Dual Emotion System
+- **Simultaneous emotions**: Agents experience both pride and shame from single actions
+- **Emotional interactions**: Pride buffers shame effects, complex psychological states
+- **Realistic scenarios**: MentorBot simulation with encouragement, conflict, and redemption
+- **Color-coded output**: Visual representation of emotional states and intensity
+
 ### Emotion Templates
 - **Multi-emotion detection**: Fear, shame, comfort, pride, loneliness triggering
 - **Realistic decay**: Emotions persist then fade over time
