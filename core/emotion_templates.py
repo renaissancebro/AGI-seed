@@ -228,10 +228,12 @@ class Loneliness(EmotionTemplate):
         # TODO: Add content analysis for loneliness triggers
         # loneliness_keywords = ["alone", "rejected", "isolated", "ignored", "excluded"]
         
-        if experience.valence == "negative":
-            # Social negative experiences can trigger loneliness
-            loneliness_intensity = experience.intensity * 0.7
-            return loneliness_intensity
+        if experience.valence == "negative" and experience.intensity > 0.6:
+            # Only moderate-to-high social negative experiences trigger loneliness
+            # For now, assume some negative experiences are social
+            if "alone" in experience.content.lower() or "isolated" in experience.content.lower():
+                loneliness_intensity = min((experience.intensity - 0.6) * 2.0, 1.0)
+                return loneliness_intensity
         return 0.0
     
     def influence_belief_update(self, belief: Belief, experience: Experience) -> Dict[str, Any]:
