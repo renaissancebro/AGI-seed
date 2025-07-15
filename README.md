@@ -43,12 +43,17 @@ This repository implements **emotions as computational primitives** using physic
 ## 📁 Repository Structure
 
 ```
-├── agents/           # Emotional AI agents
-├── core/            # Core emotional modeling systems
-├── examples/        # Demonstrations and usage examples  
-├── notes/           # Detailed documentation and theory
-├── simulation/      # Interactive testing environments
-└── models/          # AI model integrations
+├── psychological_systems/    # Core psychological modeling
+│   ├── identity/            # Gravitational identity physics
+│   ├── emotions/            # Emotion templates & shame mechanism  
+│   ├── uncertainty/         # AI uncertainty measurement
+│   └── integration/         # Unified agent framework
+├── examples/                # Demonstrations and focused docs
+│   └── docs/               # Detailed system documentation
+├── agents/                 # Legacy agents (uncertainty_agent)
+├── core/                   # Legacy core systems
+├── notes/                  # Research notes and theory
+└── models/                 # AI model integrations
 ```
 
 ## 📚 Documentation
