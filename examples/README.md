@@ -23,6 +23,13 @@ python examples/demo_pride.py --basic      # Simple pride demonstration
 python examples/demo_pride.py --comparison # Integration style comparison
 ```
 
+### Dual Emotion System
+```bash
+python examples/demo_dual_emotion.py       # MentorBot experiencing pride and shame
+python examples/demo_dual_emotion.py --scenario quick    # Simple dual emotion test
+python examples/demo_dual_emotion.py --no-color         # Text-only output
+```
+
 ### Emotion Templates
 ```bash
 python -m psychological_systems.emotions.templates
