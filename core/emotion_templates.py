@@ -108,12 +108,12 @@ class Shame(EmotionTemplate):
         """
         Shame triggers from experiences involving personal failure or judgment.
         """
-        if experience.valence == "negative":
+        if experience.valence == "negative" and experience.intensity > 0.6:
             # TODO: Add content analysis for shame triggers
             # shame_keywords = ["failure", "embarrassment", "rejected", "criticized", "inadequate"]
             
-            # For now, moderate negative experiences can trigger shame
-            shame_intensity = experience.intensity * 0.8
+            # Only moderate-to-high negative experiences trigger shame
+            shame_intensity = min((experience.intensity - 0.6) * 1.5, 1.0)
             return shame_intensity
         return 0.0
     
