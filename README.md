@@ -23,18 +23,22 @@ python examples/demo_shame.py              # Advanced shame mechanism
 python examples/demo_questions.py          # Uncertainty agent (needs API key)
 ```
 
-## 🧠 Emotional Framework
+## 🧠 Psychological Systems
 
-This repository implements **emotions as computational primitives** using physics-based metaphors:
+This repository implements **emotions as computational primitives** using physics-based metaphors and realistic human-scale psychology:
 
-### Currently Implemented
-- **[Uncertainty as Osmosis](notes/uncertainty.md)** - Pressure gradients driving decision-making and verbal hesitation
-- **Working Agent**: `agents/uncertainty_agent.py` demonstrates real-time uncertainty detection and behavioral modification
+### ✅ Fully Implemented
+- **[Identity as Gravitational Physics](examples/docs/identity.md)** - Beliefs create mass, experiences cause gravitational resistance to change
+  - Loss aversion, elastic resilience, trauma thresholds, realistic scaling
+- **[Advanced Shame Mechanism](examples/docs/shame.md)** - Violations of internalized standards trigger shame
+  - Semantic dissonance, social exposure amplification, belief damage
+- **[Emotion Templates](examples/docs/emotions.md)** - Fear, shame, comfort, pride, loneliness detection framework
+- **[Uncertainty as AI Measurement](examples/docs/uncertainty.md)** - Response variance driving decision confidence
 
-### Theoretical Framework
-- **Identity as Gravity** - Core beliefs resist change, new ideas need activation energy
-- **Trauma as Nuclear Decay** - Emotional healing follows exponential half-life patterns
-- **More emotions in development...**
+### 🧪 Integration Framework
+- **Modular Architecture** - `psychological_systems/` with identity, emotions, uncertainty modules
+- **Unified Agents** - Framework ready for combining multiple psychological primitives
+- **Realistic Psychology** - Human-scale experience weighting, diminishing returns, recovery patterns
 
 ## 📁 Repository Structure
 
