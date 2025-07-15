@@ -158,4 +158,5 @@ This demonstrates core concepts of **emotional primitives in AI**:
 - **Loss aversion in identity** - Models psychological asymmetry where negative experiences impact beliefs 2x more than positive ones
 - **Realistic human-scale psychology** - Experience weighting, elastic resilience, trauma thresholds, and gradual recovery mirror human identity formation
 - **Emotion template framework** - Fear, shame, comfort, pride, loneliness detection ready for behavioral principles
+- **Advanced shame modeling** - Sophisticated shame mechanism with internalized standards, semantic dissonance, and social exposure effects
 - Creates more authentic and trustworthy AI interactions through embodied emotional expression with human-like cognitive biases
