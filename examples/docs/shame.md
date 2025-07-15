@@ -197,6 +197,28 @@ The shame mechanism integrates with the identity system by:
 3. **Belief Damage**: Reduce strength of violated beliefs/standards
 4. **Identity Impact**: Recalculate identity mass after shame effects
 
+## Integration with Pride System
+
+The shame mechanism interacts with the pride system in sophisticated ways:
+
+### Pride-Shame Buffering
+- **Active pride reduces shame impact** by up to 60%
+- **Simultaneous emotions** can occur from complex actions
+- **Emotional complexity** reflects realistic psychological states
+
+### Dual Emotion Demo
+See `python examples/demo_dual_emotion.py` for:
+- MentorBot experiencing both pride and shame
+- Pride buffering shame effects in real-time
+- Complex emotional interactions during redemptive actions
+
+```bash
+# Example: Action triggers both emotions
+Action: "I'll help you, you idiot"
+Pride: 1.000 intensity (helpful intent)
+Shame: 0.270 intensity (buffered from 0.675 by pride)
+```
+
 ## Research Applications
 
 This demonstrates:
@@ -205,3 +227,4 @@ This demonstrates:
 - **Self-regulation**: How shame creates behavioral modification pressure
 - **Authentic emotion**: Genuine psychological response to belief violations
 - **Therapeutic modeling**: Understanding shame-based psychological patterns
+- **Dual emotion processing**: Realistic emotional complexity with pride-shame interactions
