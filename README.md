@@ -42,6 +42,7 @@ This repository implements **emotions as computational primitives** using physic
 ### 🧪 Integration Framework
 - **Modular Architecture** - `psychological_systems/` with identity, emotions, uncertainty modules
 - **Unified Agents** - Framework ready for combining multiple psychological primitives
+- **Dual Emotion Systems** - Agents experiencing both pride and shame simultaneously
 - **Realistic Psychology** - Human-scale experience weighting, diminishing returns, recovery patterns
 
 ## 📁 Repository Structure
