@@ -42,12 +42,15 @@ class EmotionTemplate(ABC):
         self.intensity = max(self.intensity, intensity)  # Take strongest intensity
         self.active_duration = max(self.active_duration, duration)
     
-    def decay(self, decay_rate: float = 0.1):
+    def decay(self, decay_rate: float = 0.3):
         """Decay emotion intensity over time."""
         if self.active_duration > 0:
             self.active_duration -= 1
             if self.active_duration <= 0:
                 self.intensity *= (1 - decay_rate)
+        else:
+            # Always decay when not in active duration
+            self.intensity *= (1 - decay_rate)
     
     def is_active(self) -> bool:
         """Check if emotion is currently active."""
