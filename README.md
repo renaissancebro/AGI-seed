@@ -8,19 +8,19 @@ This repository implements sophisticated psychological systems including gravita
 
 ## 🚀 Quick Start
 
-Try the uncertainty agent:
-
 ```bash
 # Clone and setup
 git clone https://github.com/renaissancebro/AGI-seed.git
 cd AGI-seed
 pip install -r requirements.txt
 
-# Add your OpenAI API key to .env file
+# Add your OpenAI API key to .env file (optional for core systems)
 echo "OPENAI_API_KEY=your-key-here" > .env
 
-# Run demonstrations
-python examples/demo_questions.py
+# Try the psychological systems
+python examples/demo_identity.py --model    # Identity & emotion templates
+python examples/demo_shame.py              # Advanced shame mechanism
+python examples/demo_questions.py          # Uncertainty agent (needs API key)
 ```
 
 ## 🧠 Emotional Framework
