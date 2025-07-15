@@ -58,6 +58,12 @@ Each system has focused documentation with theory, usage examples, and observabl
 - **Belief damage**: Shame reduces violated belief strength and creates avoidance drive
 - **Semantic dissonance**: Vector-based contradiction measurement
 
+### Pride Mechanism
+- **Aspiration alignment**: Achievements matching aspirations trigger pride
+- **Integration styles**: Mandatory (neurodivergent) vs optional (neurotypical) aspiration handling
+- **Recognition amplification**: Self < peer < public < authority recognition multipliers
+- **Belief strengthening**: Pride reinforces related beliefs and buffers shame effects
+
 ### Emotion Templates
 - **Multi-emotion detection**: Fear, shame, comfort, pride, loneliness triggering
 - **Realistic decay**: Emotions persist then fade over time
