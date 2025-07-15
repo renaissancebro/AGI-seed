@@ -70,6 +70,7 @@ This repository implements **emotions as computational primitives** using physic
 - **[Identity System](examples/docs/identity.md)** - Gravitational identity physics with realistic human psychology
 - **[Shame Mechanism](examples/docs/shame.md)** - Advanced shame modeling with internalized standards
 - **[Pride Mechanism](examples/docs/pride.md)** - Achievement-based pride with neurodivergent/neurotypical styles
+- **[Comfort Mechanism](examples/docs/comfort.md)** - Emotional ground state with still water metaphor
 - **[Emotion Templates](examples/docs/emotions.md)** - Fear, shame, comfort, pride, loneliness framework
 - **[Uncertainty System](examples/docs/uncertainty.md)** - AI uncertainty measurement and expression
 
