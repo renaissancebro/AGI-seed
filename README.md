@@ -37,6 +37,8 @@ This repository implements **emotions as computational primitives** using physic
   - Semantic dissonance, social exposure amplification, belief damage
 - **[Pride Mechanism](examples/docs/pride.md)** - Achievement-based pride with neurodivergent/neurotypical integration styles
   - Mandatory vs optional aspirations, recognition amplification, shame buffering
+- **[Comfort Mechanism](examples/docs/comfort.md)** - Emotional ground state from alignment, certainty, and coherence
+  - Still water metaphor, stability building, emotional dampening, interruption dynamics
 - **[Emotion Templates](examples/docs/emotions.md)** - Fear, shame, comfort, pride, loneliness detection framework
 - **[Uncertainty as AI Measurement](examples/docs/uncertainty.md)** - Response variance driving decision confidence
 
