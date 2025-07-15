@@ -135,7 +135,8 @@ I'm still forming my understanding of this:
 6. **Elastic Resilience** - Rubber band effect - resistance to moving far from baseline, with gradual recovery
 7. **Trauma Threshold** - Major events (intensity > 0.9) can cause significant identity shifts
 8. **Emotion Templates** - Fear, shame, comfort, pride, loneliness detection (framework ready for principles)
-9. **Identity Tone** - Modulates expression based on gravitational resistance to change
+9. **Advanced Shame Model** - Violations of internalized standards trigger shame based on belief strength × contradiction × social exposure
+10. **Identity Tone** - Modulates expression based on gravitational resistance to change
 
 ## 🎯 Thresholds
 
