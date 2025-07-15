@@ -16,6 +16,13 @@ python examples/demo_shame.py              # Basic shame demo
 python examples/demo_shame.py --comprehensive  # Multiple scenarios
 ```
 
+### Pride Mechanism
+```bash
+python examples/demo_pride.py              # Full neurodivergent/neurotypical comparison
+python examples/demo_pride.py --basic      # Simple pride demonstration
+python examples/demo_pride.py --comparison # Integration style comparison
+```
+
 ### Emotion Templates
 ```bash
 python -m psychological_systems.emotions.templates
