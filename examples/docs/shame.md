@@ -228,3 +228,17 @@ This demonstrates:
 - **Authentic emotion**: Genuine psychological response to belief violations
 - **Therapeutic modeling**: Understanding shame-based psychological patterns
 - **Dual emotion processing**: Realistic emotional complexity with pride-shame interactions
+
+---
+
+## Related Documentation
+
+### Other Emotion Systems  
+- **[Pride Mechanism](pride.md)** - How pride can buffer shame effects
+- **[Comfort Mechanism](comfort.md)** - How comfort dampens shame and provides recovery foundation
+- **[Dual Emotion Demo](../demo_dual_emotion.py)** - See realistic shame-pride interactions
+
+### Core Systems
+- **[Identity System](identity.md)** - How shame affects gravitational identity physics  
+- **[Emotion Templates](emotions.md)** - How shame fits in the broader emotion framework
+- **[Examples Overview](../README.md)** - Quick start commands for all psychological systems
