@@ -214,4 +214,14 @@ def get_confidence_drive(self) -> float:
 
 ---
 
-**Ready for your specifications to transform this skeleton into a full pride mechanism!**
+## Related Documentation
+
+### Other Emotion Systems
+- **[Shame Mechanism](shame.md)** - How pride buffers shame and creates emotional complexity
+- **[Comfort Mechanism](comfort.md)** - How comfort provides stable foundation for sustainable pride
+- **[Dual Emotion Demo](../demo_dual_emotion.py)** - See realistic pride-shame interactions
+
+### Core Systems  
+- **[Identity System](identity.md)** - How pride affects gravitational identity physics
+- **[Emotion Templates](emotions.md)** - How pride fits in the broader emotion framework
+- **[Examples Overview](../README.md)** - Quick start commands for all psychological systems
