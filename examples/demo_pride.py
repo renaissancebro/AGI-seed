@@ -95,7 +95,8 @@ def run_comparison_demo():
         )
         
         pride, alignments, effects = agent.achieve_action(good_action)
-        print(f"Good code - Pride: {pride.intensity:.3f if pride else 0:.3f}")
+        pride_intensity = pride.intensity if pride else 0.0
+        print(f"Good code - Pride: {pride_intensity:.3f}")
         
         # Poorly aligned action  
         bad_action = PrideAction(
