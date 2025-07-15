@@ -114,10 +114,11 @@ class Belief:
         Apply gradual elastic recovery toward baseline over time.
         Call this periodically to simulate healing/normalization.
         """
-        if abs(self.strength - self.baseline_strength) > 0.05:
+        distance = abs(self.strength - self.baseline_strength)
+        if distance > 0.01:  # Lowered threshold to capture smaller changes
             # Move slightly back toward baseline
             direction = 1 if self.baseline_strength > self.strength else -1
-            recovery = direction * recovery_factor
+            recovery = direction * recovery_factor * min(distance * 2, 1.0)  # Scale recovery by distance
             self.strength = max(0.0, min(1.0, self.strength + recovery))
 
 
