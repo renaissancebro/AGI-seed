@@ -40,6 +40,7 @@ Each system has focused documentation with theory, usage examples, and observabl
 
 - **[Identity System](docs/identity.md)** - Gravitational identity physics with realistic human psychology
 - **[Shame Mechanism](docs/shame.md)** - Advanced shame modeling with internalized standards  
+- **[Pride Mechanism](docs/pride.md)** - Achievement-based pride with neurodivergent/neurotypical styles
 - **[Emotion Templates](docs/emotions.md)** - Fear, shame, comfort, pride, loneliness framework
 - **[Uncertainty System](docs/uncertainty.md)** - AI uncertainty measurement and expression
 
