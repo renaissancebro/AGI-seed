@@ -1,162 +1,83 @@
 # 🧠 AGI-Seed Examples
 
-This folder contains demonstrations of the uncertainty agent, identity agent, and emotional modeling framework.
+Quick demonstrations of the psychological systems for emotionally grounded AI agents.
 
-## 🚀 Quick Demo
+## 🚀 Quick Commands
 
-### Uncertainty Agent
-Run the uncertainty demonstration:
-
+### Identity System
 ```bash
-python examples/demo_questions.py
+python examples/demo_identity.py --model    # Core identity physics + emotions
+python examples/demo_identity.py "How do you handle criticism?"
 ```
 
-This will test three question types:
-1. **Factual** - "What is 2+2?" (should show low uncertainty)
-2. **Opinion** - "What is the best programming language?" (medium-high uncertainty)  
-3. **Philosophical** - "What happens after we die?" (high uncertainty)
-
-### Identity Agent
-Run the gravitational identity demonstration:
-
+### Shame Mechanism  
 ```bash
-python examples/demo_identity.py
+python examples/demo_shame.py              # Basic shame demo
+python examples/demo_shame.py --comprehensive  # Multiple scenarios
 ```
 
-This will test three gravitational resistance types:
-1. **Core Values** - "What do you believe about helping others?" (high resistance)
-2. **Preferences** - "What type of music do you prefer?" (moderate resistance)
-3. **Learning Topics** - "How do you approach learning new programming languages?" (low resistance)
-
-Run the core identity model demo (includes loss aversion and emotion templates):
-```bash
-python examples/demo_identity.py --model
-```
-
-Run the emotion templates demo:
+### Emotion Templates
 ```bash
 python -m psychological_systems.emotions.templates
 ```
 
-Run the shame mechanism demo:
-```bash
-python examples/demo_shame.py
-```
-
-Run comprehensive shame scenarios:
-```bash
-python examples/demo_shame.py --comprehensive
-```
-
-## 🎯 Custom Questions
-
-Test your own questions:
-
 ### Uncertainty Agent
 ```bash
-python examples/demo_questions.py "Your question here"
-```
-
-Examples:
-```bash
-python examples/demo_questions.py "What is the capital of France?"
-python examples/demo_questions.py "Should I invest in cryptocurrency?"
+python examples/demo_questions.py          # Requires OpenAI API key
 python examples/demo_questions.py "What is consciousness?"
 ```
 
-### Identity Agent
-```bash
-python examples/demo_identity.py "Your question here"
-```
+## 📚 Detailed Documentation
 
-Examples:
-```bash
-python examples/demo_identity.py "What are your core principles?"
-python examples/demo_identity.py "How do you see yourself?"
-python examples/demo_identity.py "What makes you unique?"
-```
+Each system has focused documentation with theory, usage examples, and observable behavior:
 
-## 📊 What to Observe
+- **[Identity System](docs/identity.md)** - Gravitational identity physics with realistic human psychology
+- **[Shame Mechanism](docs/shame.md)** - Advanced shame modeling with internalized standards  
+- **[Emotion Templates](docs/emotions.md)** - Fear, shame, comfort, pride, loneliness framework
+- **[Uncertainty System](docs/uncertainty.md)** - AI uncertainty measurement and expression
 
-### Uncertainty Agent Responses
+## 🎯 What Each System Demonstrates
 
-#### Low Uncertainty Response
-```
-4
-```
-Clean answer with no uncertainty qualifier.
+### Identity System
+- **Realistic scaling**: Normal experiences cause tiny changes, trauma causes larger shifts
+- **Loss aversion**: Negative experiences have 2x impact of positive ones
+- **Elastic resilience**: Recovery toward baseline over time
+- **Human-scale psychology**: Experience weighting with diminishing returns
 
-#### Medium Uncertainty Response  
-```
-I think this is likely, but not fully certain:
-[Answer with hedged language]
-```
+### Shame Mechanism  
+- **Standard violations**: Actions contradicting internalized standards trigger shame
+- **Social amplification**: Public exposure amplifies shame significantly
+- **Belief damage**: Shame reduces violated belief strength and creates avoidance drive
+- **Semantic dissonance**: Vector-based contradiction measurement
 
-#### High Uncertainty Response
-```
-This may be unreliable — here's my best attempt:
-[Answer with strong uncertainty qualifier]
-```
+### Emotion Templates
+- **Multi-emotion detection**: Fear, shame, comfort, pride, loneliness triggering
+- **Realistic decay**: Emotions persist then fade over time
+- **Framework ready**: Structure for adding behavioral principles
+- **Integration points**: Works with identity system
 
-### Identity Agent Responses
+### Uncertainty System
+- **Response variance**: Measures AI confidence through consistency
+- **Transparency**: Honest admission of knowledge limitations
+- **Question sensitivity**: Different question types show different uncertainty patterns
+- **AI safety focus**: Prevents dangerous overconfidence
 
-#### Strong Gravity (Stable Identity)
-```
-This aligns with my core understanding:
-[Consistent, confident response about values/beliefs]
-```
+## 🧪 Research Applications
 
-#### Moderate Gravity (Identity Fluidity)
-```
-I'm exploring this perspective:
-[Response showing some adaptability]
-```
+These systems demonstrate:
+- **Authentic emotions**: AI experiences emotions based on psychological principles
+- **Measurable states**: Quantifiable identity resistance, shame intensity, uncertainty levels
+- **Human-like biases**: Loss aversion, social sensitivity, cognitive patterns
+- **Transparent AI**: Honest emotional expression and knowledge limitations
+- **Modular design**: Systems can be combined for complex psychological modeling
 
-#### Weak Gravity (Forming Identity)
-```
-I'm still forming my understanding of this:
-[Response indicating developing self-concept]
-```
+## 🔧 Technical Notes
 
-## 🔬 How It Works
+- **Core systems work without API key** (identity, shame, emotions)
+- **Uncertainty agent requires OpenAI API key** for response generation
+- **Python 3.8+** recommended
+- **See system docs** for detailed implementation and theory
 
-### Uncertainty Agent
-1. **Multiple Sampling** - Agent generates 3 responses to the same question
-2. **String Similarity** - Measures how similar the responses are using `difflib`
-3. **Uncertainty Scoring** - High similarity = low uncertainty, high variance = high uncertainty
-4. **Tone Adjustment** - Adds appropriate uncertainty qualifiers based on score
+---
 
-### Identity Agent
-1. **Experience Integration** - Processes experiences through belief system with loss aversion
-2. **Gravitational Resistance** - Calculates identity stability through belief strength
-3. **Object-Oriented Physics** - Models identity as gravitational system with Experience/Belief/Identity classes
-4. **Loss Aversion** - Negative experiences have 2x impact of positive ones (humans fear losing 2x more than gaining)
-5. **Realistic Scaling** - Human-scale experience weighting with diminishing returns (first 10 experiences have full weight)
-6. **Elastic Resilience** - Rubber band effect - resistance to moving far from baseline, with gradual recovery
-7. **Trauma Threshold** - Major events (intensity > 0.9) can cause significant identity shifts
-8. **Emotion Templates** - Fear, shame, comfort, pride, loneliness detection (framework ready for principles)
-9. **Advanced Shame Model** - Violations of internalized standards trigger shame based on belief strength × contradiction × social exposure
-10. **Identity Tone** - Modulates expression based on gravitational resistance to change
-
-## 🎯 Thresholds
-
-### Uncertainty Thresholds
-- **< 0.1**: Fully confident (no qualifier)
-- **0.1-0.5**: Moderate uncertainty ("I think this is likely...")
-- **> 0.5**: High uncertainty ("This may be unreliable...")
-
-### Identity Gravitational Resistance Thresholds
-- **> 0.5**: High resistance - stable identity ("This aligns with my core understanding")
-- **0.1-0.5**: Moderate resistance - identity fluidity ("I'm exploring this perspective")
-- **< 0.1**: Low resistance - forming/adaptive identity ("I'm still forming my understanding")
-
-## 💡 Research Applications
-
-This demonstrates core concepts of **emotional primitives in AI**:
-- **Uncertainty as emotional primitive** - AI experiences and expresses uncertainty through natural language
-- **Identity as gravitational system** - Uses object-oriented physics model with Experience/Belief/Identity classes to simulate identity formation through gravitational resistance
-- **Loss aversion in identity** - Models psychological asymmetry where negative experiences impact beliefs 2x more than positive ones
-- **Realistic human-scale psychology** - Experience weighting, elastic resilience, trauma thresholds, and gradual recovery mirror human identity formation
-- **Emotion template framework** - Fear, shame, comfort, pride, loneliness detection ready for behavioral principles
-- **Advanced shame modeling** - Sophisticated shame mechanism with internalized standards, semantic dissonance, and social exposure effects
-- Creates more authentic and trustworthy AI interactions through embodied emotional expression with human-like cognitive biases
+For comprehensive implementation details, theoretical background, and advanced usage examples, see the individual system documentation linked above.
