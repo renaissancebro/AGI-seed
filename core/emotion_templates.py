@@ -146,9 +146,9 @@ class Comfort(EmotionTemplate):
         """
         Comfort triggers from positive, safe, or familiar experiences.
         """
-        if experience.valence == "positive":
-            # Gentle positive experiences trigger comfort
-            comfort_intensity = experience.intensity * 0.6
+        if experience.valence == "positive" and experience.intensity > 0.3:
+            # Gentle to moderate positive experiences trigger comfort
+            comfort_intensity = min(experience.intensity * 0.8, 1.0)
             
             # TODO: Add content analysis for comfort triggers
             # comfort_keywords = ["safe", "peaceful", "familiar", "supported", "accepted"]
