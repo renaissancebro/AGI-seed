@@ -170,19 +170,19 @@ def get_confidence_drive(self) -> float:
 - Should pride make agents more/less risk-taking?
 - How does pride interact with existing identity systems?
 
-### 6. **Integration Points**
-- How does pride interact with shame mechanisms?
-- Can agents experience both simultaneously?
-- How does pride modify the emotion template system?
+### 6. **Integration Points** ✅
+- Pride interacts with shame mechanisms through buffering effects
+- Agents can experience both simultaneously (see dual emotion demo)
+- Pride integrates with emotion template system through belief strengthening
 
-## Demonstration Scenarios (TBD)
+## Demonstration Scenarios ✅
 
-Proposed demonstration scenarios:
-1. **Achievement Pride**: Agent accomplishes difficult task, experiences pride
-2. **Recognition Amplification**: Same achievement with different recognition levels
-3. **Multiple Aspirations**: Achievement aligns with multiple aspirational goals
-4. **Pride-Shame Interaction**: How pride and shame interact in complex scenarios
-5. **Identity Integration**: How pride strengthens identity over time
+**Available Demonstrations:**
+1. **Achievement Pride**: `python examples/demo_pride.py` - Shows pride from aspiration alignment
+2. **Recognition Amplification**: Recognition multipliers (self, peer, public, authority)
+3. **Integration Styles**: Neurodivergent vs neurotypical aspiration handling
+4. **Pride-Shame Interaction**: `python examples/demo_dual_emotion.py` - MentorBot experiencing both emotions
+5. **Identity Integration**: Belief strengthening and mass changes from pride effects
 
 ## Integration with Existing Systems
 
