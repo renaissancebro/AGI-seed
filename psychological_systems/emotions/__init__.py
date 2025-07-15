@@ -22,6 +22,14 @@ from .templates import (
     EmotionSystem,
     demonstrate_emotion_templates
 )
+from .shame import (
+    InternalizedStandard,
+    ShameCalculator,
+    ShameAction,
+    ShameEmotion,
+    ShameCapableIdentity,
+    demonstrate_shame_mechanism
+)
 
 __all__ = [
     'EmotionTemplate', 
@@ -31,5 +39,11 @@ __all__ = [
     'Pride', 
     'Loneliness', 
     'EmotionSystem',
-    'demonstrate_emotion_templates'
+    'demonstrate_emotion_templates',
+    'InternalizedStandard',
+    'ShameCalculator',
+    'ShameAction', 
+    'ShameEmotion',
+    'ShameCapableIdentity',
+    'demonstrate_shame_mechanism'
 ]
