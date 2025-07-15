@@ -20,6 +20,7 @@ echo "OPENAI_API_KEY=your-key-here" > .env
 # Try the psychological systems
 python examples/demo_identity.py --model    # Identity & emotion templates
 python examples/demo_shame.py              # Advanced shame mechanism
+python examples/demo_pride.py              # Pride with neurodivergent/neurotypical styles
 python examples/demo_questions.py          # Uncertainty agent (needs API key)
 ```
 
