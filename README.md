@@ -1,6 +1,6 @@
 # AGI-Seed
 
-AGI-Seed is my starting point toward building emotionally grounded AI systems. It stems from a personal need: to understand myself and translate that awareness into tools that can make AI safer, more human-aligned, and harder to misuse.
+AGI-Seed is concept to point toward building aligned AI systems, a differnt approach opting for inside out monitoriing instead of outside consitutional monitoring that is currently emphasized. The whack a mole approach of trying to montior every possible contingincy of AI is much less feasible than giving a sense of right and wrong from within the model smiilar to humans who weigh morals and feel deeply preventing them from doing rational but cruel decisions. 
 
 This is a project about embedding emotional primitives — like uncertainty, shame, pride, and empathy — into models using realistic human-scale psychology. My belief is simple: if we can't model meaning and emotional behavior, we're building powerful tools blind to the real structure of human experience.
 
@@ -88,4 +88,4 @@ This repository implements **emotions as computational primitives** using physic
 
 ## Credit & Origin
 
-This project is created and maintained by Joshua C. Freeman(https://www.linkedin.com/in/joshuafreeman-/). It is the starting point of an open emotional modeling framework. All commits are timestamped. Feel free to fork and build — just cite the origin.
+This project is created and maintained by Joshua C. Freeman(https://www.linkedin.com/in/joshuafreeman-/). All commits are timestamped. Feel free to fork and build — just cite the origin.
